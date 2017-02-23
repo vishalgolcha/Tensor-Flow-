@@ -28,7 +28,7 @@ biases = {
 x = tf.placeholder("float", [None, 28, 28, 1])
 y = tf.placeholder("float", [None, n_classes])
 
-x_flat = tf.reshape(x, [-1, n_input])
+x_flat = tf.reshape(x, [-1, n_input]) #column vector for the reshape to 784 pixels 
 
 # Hidden layer with RELU activation
 layer_1 = tf.add(tf.matmul(x_flat, weights['hidden_layer']), biases['hidden_layer'])
